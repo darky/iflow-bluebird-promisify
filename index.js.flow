@@ -86,7 +86,7 @@ declare class Bluebird$Promise<R> {
   constructor(callback: (
     resolve: (result?: Bluebird$Promise<R> | R) => void,
     reject: (error?: any) => void
-  ) => mixed): void;
+  ) => mixed): R;
   then<U>(onFulfill?: (value: R) => Bluebird$Promise<U> | U, onReject?: (error: any) => Bluebird$Promise<U> | U): Bluebird$Promise<U>;
   catch<U>(onReject?: (error: any) => ?Bluebird$Promise<U> | U): Bluebird$Promise<U>;
   caught<U>(onReject?: (error: any) => ?Bluebird$Promise<U> | U): Bluebird$Promise<U>;
